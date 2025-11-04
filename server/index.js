@@ -29,7 +29,7 @@ app.get('/',(req, res) => {
   res.send('Hello, World!');
 });
 
-app.get('/config/:droneId',async (req, res) => {
+app.get('/configs/:droneId',async (req, res) => {
   const droneId = Number(req.params.droneId);
   const droneConfigs = await getConfigs();
   const droneConfig = droneConfigs.data.find((drone) => {return drone.drone_id === droneId});
