@@ -5,6 +5,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './component/Navbar'
 import ConfigPage from './page/ConfigPage';
+import TemperatureForm from './page/TemperatureForm'
+import LogsPage from './page/LogsPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<ConfigPage />} />
+        <Route path="/" element={<ConfigPage/>} />
         <Route path="/form" element={<TemperatureForm />} />
         <Route path="/logs" element={<LogsPage />} />
       </Routes>
