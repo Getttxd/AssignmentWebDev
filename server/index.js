@@ -8,13 +8,8 @@ const config_url = process.env.CONFIG_URL;
 const log_url = process.env.LOG_URL;
 const itemsPerPage = process.env.PERPAGE;
 const api_token = process.env.API_TOKEN;
-const corsOptions = {
-  origin: ['http://localhost:5173', 'https://[Your-Frontend-Domain].com'],
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
-  credentials: true,
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 async function getConfigs() {

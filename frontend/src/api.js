@@ -6,10 +6,15 @@ export async function getConfig() {
   return res.json();
 }
 
-export async function getLogs() {
-  const res = await fetch(`${API_URL}logs/${DRONE_ID}`);
+export async function getLogs(page = 1) {
+  const res = await fetch(`${API_URL}logs/${DRONE_ID}/${page}`);
   const data = await res.json();
-  return data.slice(0, 12); // limit 12 logs
+
+  if (Array.isArray(data)) {
+    return { logs: data };
+  }
+
+  return data;
 }
 
 export async function postLog({ drone_name, country, celsius }) {
