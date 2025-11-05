@@ -102,6 +102,6 @@ API Server ทำหน้าที่เป็น **Gateway** เพื่อ�
 โปรเจกต์นี้ถูก Deploy เป็น vercel เพื่อให้บริการ Frontend
 
 
-### Frontend URL https://drone-api-server-3r7c.onrender.com
+### Frontend URL https://assignment-web-dev-nu.vercel.app/
 
   
